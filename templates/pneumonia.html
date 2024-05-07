@@ -1,0 +1,251 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Pneumonia Care</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{%static 'css1/bootstrap.min.css'%}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{%static 'css1/style.css'%}">
+      
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{%static 'css1/responsive.css'%}">
+
+
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <style>
+      
+
+        .form-container1 {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px; /* Set the maximum width for responsiveness */
+            margin: 0 auto; /* Center the container horizontally */
+            margin-top: 20px; /* Add top margin to push it to the top */
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 2px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Add Bootstrap responsive classes */
+        @media (max-width: 768px) {
+            .form-container1 {
+                max-width: 100%;
+            }
+        }
+        .go-back-button1 {
+            margin-top: 20px;
+        }
+    </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section"  id="home" >
+         <div class="container" >
+            <nav class="navbar navbar-expand-lg navbar-light bg-light"  style=" background-color: black !important">
+               <div><a href="#">MED-<span>DIAGNOS</span></a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" style="color:white" href="#home">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" style="color:white"  href="#service">services</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" style="color:white"  href="#about">About</a>
+                     </li>
+               
+                     <li class="nav-item">
+                        <a class="nav-link"  style="color:white" href="#contact">Contact</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div id="costum_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <h1 class="furniture_text" style="color:white">Pneumonia Detection</h1>
+                     <p class="there_text" style="color:white">Our AI model analyzes chest X-ray images to predict the presence of pneumonia. It helps healthcare professionals make faster and more accurate diagnoses.
+                    </p>
+                  </div>
+               </div>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- banner section end -->
+      </div>
+
+      
+      <div class="about_section layout_padding" id="about"  >
+         <div class="container" style="background-color:white;">
+            <div class="row">
+               <div class="col-md-6">
+                  <h1 class="about_text" style="color:black">About Us</h1>
+                  <p class="lorem_text" style="color:black">Our AI model analyzes chest X-ray images to predict the presence of pneumonia. It helps healthcare professionals make faster and more accurate diagnoses.
+                </p>
+                  <div class="read_bt1"><a href="#">Read More</a></div>
+               </div>
+               <div class="col-md-6">
+                  <div class="image_1" ><img src="{% static 'images/pen.jpg' %}"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- header section end -->
+      <!-- services section start -->
+      <div class="services_section layout_padding" id="service" style="background: linear-gradient(#0035ff, #42e6dd);">
+    
+             <div class="form-container1 p-4">
+                 <h1 class="mb-4">Pneumonia Prediction</h1>
+                 <form method="POST" enctype="multipart/form-data">
+                     {% csrf_token %}
+                     <div class="form-group">
+                         <label for="user_images">Choose images:</label>
+                         <input type="file" class="form-control-file" name="user_images" id="user_images" accept=".jpg, .jpeg, .png" multiple>
+                     </div>
+                     <button type="submit" class="btn btn-primary btn-block">Predict</button>
+                 </form>
+                 {% if results %}
+                 <h2 class="mt-4">Results:</h2>
+                 <div class="row">
+                     {% for image, result in results %}
+                     <div class="col-md-6">
+                         <img src="{{ image }}" alt="Input Image" style="width:100%;height:300px" class="img-fluid">
+                         <div class="result-box">
+                             <p>{{ result }}</p>
+                         </div>
+                     </div>
+                     {% endfor %}
+                 </div>
+                 {% endif %}
+                 <!-- Display the uploaded images if available -->
+                 <a href="{% url 'index' %}" class="btn btn-secondary go-back-button1 mt-4">Go Back</a>
+             </div>
+
+     </div>
+     
+     
+   
+      <div class="contact_section layout_padding"  id="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <h1 class="contact_text">CONTACT US</h1>
+                  <div class="mail_section">
+                     <input type="text" class="email-bt" placeholder="Name" name="Name">
+                     <input type="text" class="email-bt" placeholder="Email" name="Name">
+                     <input type="text" class="email-bt" placeholder="Phone Number" name="Name">
+                     <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                     <div class="send_bt"><a href="#">SEND</a></div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="mail_section">
+                        <div class="map-responsive">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15168.89204224261!2d83.38284877801259!3d18.107489882838216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3be54fea54348d%3A0xa2cebddf2718595f!2sSri%20Swamy%20Ramananda%20Chest%20Clinic!5e0!3m2!1sen!2sin!4v1694724893833!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                     </div>
+               </div>
+            </div>
+         </div>
+      </div>
+     
+      <div class="copyright_section">
+      <div class="container">
+         <p class="copyright_text" style="color:black;padding-top:7px"><b> 2023 All Rights Reserved. Design by <a href="https://keyrun.pythonanywhere.com/">Tech Strivers</b></a></p>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
