@@ -13,7 +13,6 @@ def translate_text(text, target_lang):
     # Check if the target language code is valid
     if target_lang not in LANGUAGES:
         return "Invalid target language"
-
     # Translate the text to the target language
     try:
         translator = Translator(service_urls=["https://translate.google.com"])
