@@ -1,0 +1,244 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Dental Care</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{%static 'css1/bootstrap.min.css'%}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{%static 'css1/style.css'%}">
+      
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{%static 'css1/responsive.css'%}">
+
+
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <style>
+        /* Custom CSS for additional styling */
+        .container1 {
+         background: #ededed;
+         box-shadow: 0px 0px 20px #888888;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .header1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .upload-form1 {
+            text-align: center;
+        }
+
+        .image-container1 {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .uploaded-image1 {
+            flex: 1;
+            max-width: 49%;
+            margin: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+        }
+
+        .image1 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Center-align the input element below the label */
+        .file-input1 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Style for the "Go Back" button */
+        .go-back-button1 {
+            margin-top: 20px;
+        }
+    </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section"  id="home" >
+         <div class="container" >
+            <nav class="navbar navbar-expand-lg navbar-light bg-light"  style=" background-color: black !important">
+               <div><a href="#">MED-<span>DIAGNOS</span></a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" style="color:white" href="#home">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" style="color:white"  href="#service">services</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" style="color:white"  href="#about">About</a>
+                     </li>
+               
+                     <li class="nav-item">
+                        <a class="nav-link"  style="color:white" href="#contact">Contact</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div id="costum_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <h1 class="furniture_text" style="color:white">Dental Care</h1>
+                     <p class="there_text" style="color:white">                        Enhance your dental care with our AI-powered dental cavity detection service, quickly identifying cavities in uploaded images for improved oral health.
+                    </p>
+                  </div>
+               </div>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- banner section end -->
+      </div>
+
+      
+      <div class="about_section layout_padding" id="about"  >
+         <div class="container" style="background-color:white;">
+            <div class="row">
+               <div class="col-md-6">
+                  <h1 class="about_text" style="color:black">About Us</h1>
+                  <p class="lorem_text" style="color:black"> Enhance your dental care with our AI-powered dental cavity detection service, quickly identifying cavities in uploaded images for improved oral health.
+                </p>
+                  <div class="read_bt1"><a href="#">Read More</a></div>
+               </div>
+               <div class="col-md-6">
+                  <div class="image_1"><img src="{% static 'images/den.jpg' %}"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- header section end -->
+      <!-- services section start -->
+      <div class="services_section layout_padding" id="service" style="background: linear-gradient(#0035ff, #42e6dd);">
+         <div class="container1">
+             <div class="header1">
+                 <h1>Upload images to detect cavity</h1>
+             </div>
+             
+             <div class="upload-form1">
+                 <form method="post" enctype="multipart/form-data">
+                     {% csrf_token %}
+                     <div class="form-group1">
+                         <label for="files">Choose images:</label>
+                         <input type="file" class="form-control-file file-input" id="files" name="files[]" accept=".jpg, .jpeg, .png, .gif" multiple required>
+                     </div>
+                     <br>
+                     <button type="submit" style="background-color:white;color:black"class="btn btn-primary btn-block">Upload</button>
+                     <br>
+                 </form>
+             </div>
+     
+             <div class="image-container1">
+                 {% if input_images %}
+                     {% for i in input_images %}
+                         <div class="uploaded-image1">
+                             <h3>Input Image {{ forloop.counter }}</h3>
+                             <img src="{{ i }}" alt="Input Image {{ forloop.counter }}" class="image1">
+                         </div>
+                     {% endfor %}
+                 {% endif %}
+     
+                 {% if output_images %}
+                     {% for i in output_images %}
+                         <div class="uploaded-image1">
+                             <h3>Output Image {{ forloop.counter }}</h3>
+                             <img src="{{ i }}" alt="Processed Image {{ forloop.counter }}" class="image1">
+                         </div>
+                     {% endfor %}
+                 {% endif %}
+             </div>
+     
+             <a href="{% url 'index' %}" class="btn btn-secondary go-back-button1">Go Back</a>
+         </div>
+     </div>
+     
+      <div class="contact_section layout_padding"  id="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <h1 class="contact_text">CONTACT US</h1>
+                  <div class="mail_section">
+                     <input type="text" class="email-bt" placeholder="Name" name="Name">
+                     <input type="text" class="email-bt" placeholder="Email" name="Name">
+                     <input type="text" class="email-bt" placeholder="Phone Number" name="Name">
+                     <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                     <div class="send_bt"><a href="#">SEND</a></div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="mail_section">
+                        <div class="map-responsive">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3792.2279108718603!2d83.39057359986916!3d18.107263463334107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3be54d7460117d%3A0xffeb744a1e4206bc!2sDr.%20Vandana%20Lakshmi%20(MD%20General%20Medicine)%20(General%20Physician)%20-%20Aikya%20Clinic!5e0!3m2!1sen!2sin!4v1694724744049!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                </div>
+                     </div>
+               </div>
+            </div>
+         </div>
+      </div>
+     
+      <div class="copyright_section">
+      <div class="container">
+         <p class="copyright_text" style="color:black;padding-top:7px"><b> 2023 All Rights Reserved. Design by <a href="https://keyrun.pythonanywhere.com/">Tech Strivers</b></a></p>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
