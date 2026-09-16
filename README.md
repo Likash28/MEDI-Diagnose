@@ -166,10 +166,5 @@ The following pre-trained model files must be present in the project root to use
 **Likash Gunisetti**
 - GitHub: [Likash28](https://github.com/Likash28)
 - Email: likashgunisetti@gmail.com
-- Institution: GMRIT, Rajam, Andhra Pradesh
-
----
-
-## License
-
-© 2024 All rights reserved.
+- Institution: Indian Institute of Technology Guwahati
+  
